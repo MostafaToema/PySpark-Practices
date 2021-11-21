@@ -1,0 +1,30 @@
+import findspark
+findspark.init()
+import pyspark
+from pyspark.sql import SparkSession
+from pyspark.sql.types import *
+from pyspark.sql.functions import *
+
+from pyspark.ml.feature import VectorAssembler # Transformer
+from pyspark.ml.regression import LinearRegression # Estimator
+from pyspark.ml import Pipeline
+from pyspark.ml.feature import StringIndexer, OneHotEncoder
+from pyspark.ml.evaluation import RegressionEvaluator
+from pyspark.ml.classification import RandomForestClassifier
+from pyspark.ml.evaluation import MulticlassClassificationEvaluator
+
+from IPython.display import display, clear_output
+from time import sleep
+
+from graphframes import *
+
+# Create spark session 
+spark = SparkSession.builder.appName('DataFrame_SQL').getOrCreate()
+sc = spark.sparkContext
+spark
+
+
+
+
+
+
